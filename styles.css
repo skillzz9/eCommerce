@@ -160,8 +160,6 @@ HIGHLIGHTS
 #highlights:before{
     transform: translateY(-100%);
     top: 1px;
-
-
 }
 
 #highlights:after{
@@ -235,8 +233,9 @@ FEATURES
     background-color: rgba(115, 66, 214, 0.1);
 }
  .book__image{
-    max-height: 380px;
+    max-height: 272px;
     transition: all 300ms ease;
+
  }
 
  .book__image--wrapper{
@@ -265,6 +264,10 @@ FEATURES
     margin-bottom: 8px;
  }
 
+ .book__author{
+    margin-bottom: 4px;
+ }
+
  .book__title:hover{
     text-decoration: underline;
  }
@@ -277,3 +280,28 @@ FEATURES
  .book__price--normal{
     text-decoration: line-through;
  }
+
+
+
+/* RECENENT */
+
+#recent{
+    padding-bottom: 8vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    position: relative;
+}
+
+#recent:before{
+    background: url('./assets/wave.svg');
+    content: ""; /* we need this to show up */
+    position: absolute;
+    width: 101vw;
+    height: 12vw;
+    left: 0;
+    z-index: 5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(-100%);
+    top: 1px;
+}
