@@ -136,24 +136,37 @@ p{
     line-height: 1.5;
 }
 
-/* HIGHLIGHTS */
+/* 
+HIGHLIGHTS
+ */
 
 #highlights{
     position: relative;
 }
 
-#highlights:before{
+#highlights:before, 
+#highlights:after{
     background: url('./assets/wave.svg');
     content: ""; /* we need this to show up */
     position: absolute;
     width: 101vw;
     height: 12vw;
-    top: 1px;
     left: 0;
     z-index: 1;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+#highlights:before{
     transform: translateY(-100%);
+    top: 1px;
+
+
+}
+
+#highlights:after{
+    transform: translateY(100%) rotate(180deg);
+    bottom: 1px;
 
 
 }
@@ -201,10 +214,66 @@ p{
     border-radius: 4px;
     font-size: 32px;
     margin-bottom: 24px;
+    transition: transform 0.3s ease-in-out;
     
+}
+
+.highlight__image:hover{
+    transform: scale(1.2);
 }
 
 .highlight__subtitle{
     font-size: 20px;
     margin-bottom: 16px;
 }
+
+/* 
+FEATURES
+ */
+ #features{
+    padding: 8vw;
+    background-color: rgba(115, 66, 214, 0.1);
+}
+ .book__image{
+    max-height: 380px;
+    transition: all 300ms ease;
+ }
+
+ .book__image--wrapper{
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    
+ }
+
+ .book{
+    width: 25%;
+    padding: 24px;
+ }
+
+ .book:hover .book__image{
+    transform: scale(1.02);
+ }
+
+ .books{
+    display: flex;
+ }
+
+ .book__title{
+    font-size: 20px;
+    margin-bottom: 8px;
+ }
+
+ .book__title:hover{
+    text-decoration: underline;
+ }
+
+ .book__ratings{
+    margin-bottom: 8px;
+    color: #fabf2a;
+ }
+
+ .book__price--normal{
+    text-decoration: line-through;
+ }
