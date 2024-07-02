@@ -4,15 +4,15 @@ function renderBooks(filter){
   const books = getBooks();
 
   if(filter === 'LOW_TO_HIGH'){
-    const filterBooks = books.sort((a,b)=>a.originalPrice - b.originalPrice);
+    books.sort((a,b)=>(a.salePrice || a.originalPrice) - (b.salePrice || b.originalPrice));
   }
 
   if(filter === 'HIGH_TO_LOW'){
-    const filterBooks = books.sort((a,b)=>b.originalPrice - a.originalPrice);
+    books.sort((a,b)=>b.originalPrice - a.originalPrice);
   }
 
   if(filter === 'RATING'){
-    const filterBooks = books.sort((a,b)=>b.rating - a.rating);
+    books.sort((a,b)=>b.rating - a.rating);
   }
   
 
@@ -32,8 +32,7 @@ function renderBooks(filter){
     ${displayRating(book.rating)}
     </div>
     <div class="book__price">
-        <span class="book__price--normal">$${book.originalPrice.toFixed(2)}</span> $${book.salePrice}
-
+        ${renderPrice(book.originalPrice, book.salePrice)}
     </div>
 </div>`
   }).join("");
@@ -66,6 +65,13 @@ function displayRating(rating){
 
 function filterBooks(event){
   renderBooks(event.target.value);
+}
+
+function renderPrice(price, priceDiscount){
+  if(!priceDiscount){
+    return `$${price.toFixed(2)}`;
+  }
+  return `<span class="book__price--normal">$${price.toFixed(2)}</span> $${priceDiscount.toFixed(2)}`
 }
 
 // this is to make it call after HTML is loaded
