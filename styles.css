@@ -128,7 +128,7 @@ li{
     width: 120px;
 }
 
-#landing{
+#landing, #books__body{
     background-color: rgba(115, 66, 214, 0.1);
 }
 
@@ -165,6 +165,16 @@ h1{
     color: #7342d6;
     margin-bottom: 24px;
     text-align: center;
+}
+
+select{
+background-color: white;
+  border: thin solid #7342d6;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  margin-bottom: 32px;
 }
 
 h2{
@@ -344,9 +354,6 @@ FEATURES
  .book__price--normal{
     text-decoration: line-through;
  }
-
-
-
 /* RECENENT */
 
 #recent{
@@ -448,3 +455,12 @@ footer{
         width: 50%;
     }
 }
+
+/* BOOKS PAGE STYLING */
+
+.books__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+  }
