@@ -14,25 +14,7 @@ function renderBooks(filter){
   if(filter === 'RATING'){
     const filterBooks = books.sort((a,b)=>b.rating - a.rating);
   }
-
-
-  let ratingHTML = ' ';
-  let rating = 3.5;
-
-  for(let i = 0; i < Math.floor(rating); i++){
-    ratingHTML += '<i class="fas fa-star"></i>';
-  }
-
-  if(!Number.isInteger(rating)){
-    ratingHTML += '<i class="fas fa-star-half-alt"></i>';
-  }
   
-  if(rating <= 4){
-    let rest = Math.floor(5 - rating);
-    for(let i = 0; i < rest; i++){
-    ratingHTML += '<i class="fa fa-star-o"></i>';
-  }
-  }
 
 
   const booksHTML = books.map((book) => {
@@ -75,7 +57,7 @@ function displayRating(rating){
   if(rating <= 4){
     let rest = Math.floor(5 - rating);
     for(let i = 0; i < rest; i++){
-    ratingHTML += '<i class="fas fa-star"></i>';
+    ratingHTML += '<i class="fa fa-star-o"></i>';
   }
   }
   return ratingHTML;
@@ -182,7 +164,7 @@ function getBooks() {
       author: "Author",
       originalPrice: 40,
       salePrice: null,
-      rating: 4,
+      rating: 1.5,
     },
     {
       id: 11,
