@@ -174,7 +174,7 @@ background-color: white;
   display: inline-block;
   font: inherit;
   line-height: 1.5em;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 
 h2{
@@ -331,6 +331,7 @@ FEATURES
 
  .books{
     display: flex;
+    flex-wrap: wrap;
  }
 
  .book__title{
