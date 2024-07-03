@@ -203,6 +203,10 @@ button:active{
 
 }
 
+.no-cursor{
+    cursor: not-allowed;
+}
+
 .btn:hover{
     background-color: #a98be6;
 }
@@ -317,6 +321,7 @@ FEATURES
     border-radius: 4px;
     overflow: hidden;
     display: flex;
+    cursor: not-allowed;
     
  }
 
@@ -369,6 +374,7 @@ FEATURES
  .book__title{
     font-size: 20px;
     margin-bottom: 8px;
+    cursor: not-allowed;
  }
 
  .book__author{
