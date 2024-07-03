@@ -8,7 +8,7 @@ function renderBooks(filter){
   }
 
   if(filter === 'HIGH_TO_LOW'){
-    books.sort((a,b)=>b.originalPrice - a.originalPrice);
+    books.sort((a,b)=>(b.salePrice || b.originalPrice) - (a.salePrice ||a.originalPrice));
   }
 
   if(filter === 'RATING'){
