@@ -322,7 +322,10 @@ FEATURES
 
  .book{
     width: 25%;
-    padding: 24px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 24px;
+    padding-bottom: 24px;
  }
 
  .book:hover .book__image{
@@ -461,20 +464,20 @@ footer{
         padding: 0 24px;
     }
     h1{
-        font-size: 40px;
+        font-size: 32px;
     }
 
     h2{
-        font-size: 26px;
+        font-size: 20px;
     }
     
     button{
-        font-size: 18px;
+        font-size: 10px;
 
     }
 
     .book{
-        width: 50%;
+        padding: 5vw;
     }
 }
 
